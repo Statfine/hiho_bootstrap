@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hiho 公众平台</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/demo_search.css">
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+<style type="text/css">
+
+
+body,div,p,h1,h2,h3,h4,h5,h6,h7,form,ul,li,dl,dt,dd,input,a,textarea,select,em,i,strong,s{ margin:0; padding:0;word-break:break-all;word-wrap: break-word;}
+body { padding-top:70px}
+li {list-style-type:none}
+
+.code_ul li {font-family: 'Cousine';font-weight: 700;line-height: 18px;font-size: 15px;color: #19af19;}
+
+
+.flipInX {
+-webkit-backface-visibility: visible!important;
+-ms-backface-visibility: visible!important;
+backface-visibility: visible!important;
+-webkit-animation-name: flipInX;
+animation-name: flipInX;
+}
+
+.contentAnimated {
+-webkit-animation-duration: 1.5s;
+animation-duration: 1.5s;
+-webkit-animation-fill-mode: both;
+animation-fill-mode: both;
+}
+
+.Btn {display: inline-block;text-align: center;height: 60px;padding: 0 34px;color: #fff;font-size: 12px;text-transform: uppercase;box-shadow: none;cursor: pointer;
+text-decoration: none;line-height: 64px;letter-spacing: 1.5px;cursor: pointer;-webkit-transition: all 0.3s ease;-moz-transition: all 0.3s ease;-ms-transition: all 0.3s ease;transition: all 0.3s ease;background: #3a9fce;border: none;width:100%}
+
+
+.input-search {
+display: block;
+height: 100%;
+width: 100%;
+padding: 7px 0 0 82px;
+background: transparent;
+font-size: 19px;
+font-family: "AvenirLT-Light";
+color: #000;
+border: none;
+box-sizing: border-box;
+z-index: 100;
+outline: none;
+}
+
+</style>    
+    
+</head>
+  
+<body style="font-family:'微软雅黑'">
+    
+    
+    <!-- navbar-fixed-top（botton）固定位置   
+         navbar-inverse   样式黑色
+    	 container 居中  container-fluid 充满
+     -->
+	<nav class="navbar navbar-default navbar-fixed-top " role="navigation">
+		<div class="container">
+       
+            <!-- 响应显示 -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html"><img src="../img/index_new_s1_logo.png" style="width:70px; height:22px;" title="img" alt="logo"/></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="demo.html">Demo</a></li>
+                <li><a href="api.html">Api</a></li>
+              </ul>
+         
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="login.html">login</a></li>
+                <li><a href="sign_up.html">sign up</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">User<span class="caret"></span></a>
+                  <ul class="dropdown-menu " role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+    
+  		</div><!-- /.container-fluid -->
+	</nav>
+
+
+	<div style="margin-bottom:100px">
+    
+     	<!-- content one -->
+    	<div class="container">
+        
+        	<h1 style="margin: 95px 0 28px; text-align:center;font-size:54px">Experience true video search</h1>
+            <p style="color: #585858;margin: 0 auto 70px auto;line-height: 38px;max-width: 800px; text-align:center;font-size:18px">
+            	<span >From now, empower everyone to explore your videos just like text.</span><br >
+                <span >Get started today with a 14-day free trial</span>
+            </p>
+            
+            <div style="margin-top:30px; width:350px; margin:0 auto">
+            	<a href="demo.html"><button class="Btn Btn--expanded">Try our demo</button></a>
+        	</div>
+            
+        </div>
+        <!-- content one -->
+    	
+        <!-- content Code -->
+        <div class="container" style=" margin-top:100px">
+        
+            <h1 style="text-align:center; margin-bottom:10px;font-size:54px">True Video Search with Koemei APIs</h1>
+            <p style="text-align:center; margin-bottom:20px;font-size:18px">Koemei provides a suite of APIs that enables you to access our advanced speech recognition, natural language understanding and search engine to build your custom video search applications.</p>
+            
+            <div style="width: 100%;max-width: 700px;margin: 0 auto;border: 1px solid #e5e5e5;border-radius: 5px;">
+                <div style="width: 100%;height: 45px;padding: 16px 0 0 16px;background: #f2f2f2;border-bottom: 1px solid #e5e5e5;border-top-left-radius: 5px;border-top-right-radius: 5px;box-sizing: border-box;" class="clearfix">
+                    <div style="float: left;width: 14px;height: 14px;border-radius: 50%;margin-right: 8px;   background: #f95c58;"></div>
+                    <div style="float: left;width: 14px;height: 14px;border-radius: 50%;margin-right: 8px;   background: #f8b34e;"></div>
+                    <div style="float: left;width: 14px;height: 14px;border-radius: 50%;margin-right: 8px;   background: #85c258;"></div>
+                </div>
+                
+                <div style="text-align: left;padding: 33px 40px 45px;height: 440px;">
+                    <div id="api-text" style="color: #39b0e7;margin-bottom: 20px;font-size: 18px;font-family: "AvenirLT-Book";height: 18px;"> GET /transcripts/video1</div>
+                    
+                    <ul class="code_ul" style="display:block" id="code_ul_one">
+                        <li>{</li>
+                        <li style="margin-left:30px">"results": [</li>
+                        <li style="margin-left:60px"><span >{</span></li>
+                        <li style="margin-left:90px">"start": 4,</li>
+                        <li style="margin-left:90px">"text": "smart pricing model",</li>
+                        <li style="margin-left:90px"><span>"highlighted": "smart </span><b >pricing</b><span> model"</span></li>
+                        <li style="margin-left:60px"><span>}</span><span>,</span></li>
+                        <li style="margin-left:60px"><span>{</span></li>
+                        <li style="margin-left:90px">"start": 10,</li>
+                        <li style="margin-left:90px">"text": "Google and Yahoo",</li>
+                        <li style="margin-left:90px"><span>"highlighted": "Google and </span><b>Yahoo</b><span>"</span></li>
+                        <li style="margin-left:60px"><span>}</span></li>
+                        <li style="margin-left:30px">]</li>
+                        <li>}</li>
+                    </ul>
+                    
+                    <ul class="code_ul" style="display: none" id="code_ul_two" >
+                        <li>{</li>
+                        <li style="margin-left:30px">"topics": [</span><span data-reactid=".16ur6wr8zcw.$/.4.8.1.1.1.1">{</span></li>
+                        <li style="margin-left:60px">"label": "/business and industrial",</li>
+                        <li style="margin-left:60px">"score": 0.967595</li>
+                        <li style="margin-left:30px"><span>}</span><span>],</span></li>
+                        <li style="margin-left:30px"><span> "entities": [</span><span>{</span></li>
+                        <li style="margin-left:60px">"text": "Google",</li>
+                        <li style="margin-left:60px">"type": "Company",</li>
+                        <li style="margin-left:60px"><span>"sentiment": </span><span>{</span></li>
+                        <li style="margin-left:90px">"speaker": "SPK02",</li>
+                        <li style="margin-left:90px">"type": "positive",</li>
+                        <li style="margin-left:90px">"score": 0.831402</li>
+                        <li style="margin-left:60px"><span>}</span><span>,</span></li>
+                        <li style="margin-left:60px">"website": "http://www.google.com/",</li>
+                        <li style="margin-left:60px">"dbpedia": "http://dbpedia.org/resource/Google",</li>
+                        <li style="margin-left:60px">"crunchbase": "http://www.crunchbase.com/company/google"</li>
+                        <li style="margin-left:30px"><span>}</span><span>]</span></li>
+                        <li>}</li>
+                    </ul> 
+                </div>
+                
+            </div>
+            
+            <div style=" width:350px; margin:0 auto; margin-top:30px;">
+            	<a href="api.html"><button class="Btn Btn--expanded">Get your API key</button></a>
+        	</div>
+            
+        </div>
+    	<!-- content Code -->
+    
+    	
+        <!-- content Des -->
+        <div class="container" style=" margin-top:100px">
+            <h1 style="text-align:center;  margin-bottom:10px; font-size:54px">Des Two</h1>
+            <p style="text-align:center;  margin-bottom:20px; font-size:18px">
+                Phasellus suscipit nisi hendrerit metus pharetra dignissim. Nullam nunc ante, viverra quis<br> 
+                ex non, porttitor iaculis nisi.
+            </p>
+            <!-- begin row -->
+            <div class="row">
+                <!-- begin col-4 -->
+                <div class="col-md-4 col-sm-4">
+                    <!-- begin team -->
+                    <div style="text-align:center;padding: 0 30px;">             
+                        <div class="flipInX contentAnimated" style="display: inline-block;border-radius: 300px;overflow: hidden;">
+                            <img src="../img/user-1.jpg" alt="Ryan Teller" style="border-radius: 300px;">
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <h3 style="margin-bottom: 5px;">Ryan Teller</h3>
+                            <div style="font-size: 12px;margin-bottom: 15px;font-weight: 600;color: #00acac;">FOUNDER</div>
+                            <p style="font-size: 12px;line-height: 20px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                        </div>                     
+                    </div>
+                    <!-- end team -->
+                </div>
+                <!-- end col-4 -->
+                <!-- begin col-4 -->
+                <div class="col-md-4 col-sm-4">
+                    <!-- begin team -->
+                    <div style="text-align:center;padding: 0 30px;">             
+                        <div class="flipInX contentAnimated" style="display: inline-block;border-radius: 300px;overflow: hidden;">
+                            <img src="../img/user-2.jpg" alt="Jonny Cash" style="border-radius: 300px;">
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <h3 style="margin-bottom: 5px;">Johnny Cash</h3>
+                            <div style="font-size: 12px;margin-bottom: 15px;font-weight: 600;color: #00acac;">WEB DEVELOPER</div>
+                            <p style="font-size: 12px;line-height: 20px;">Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                        </div>                     
+                     </div>
+                     <!-- end team -->
+                 </div>
+                 <!-- end col-4 -->
+                 <!-- begin col-4 -->
+                 <div class="col-md-4 col-sm-4">
+                    <!-- begin team -->
+                    <div style="text-align:center;padding: 0 30px;">             
+                        <div class="flipInX contentAnimated" style="display: inline-block;border-radius: 300px;overflow: hidden;">
+                            <img src="../img/user-3.jpg" alt="Mia Donovan">
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <h3 style="margin-bottom: 5px;">Mia Donovan</h3>
+                            <div style="font-size: 12px;margin-bottom: 15px;font-weight: 600;color: #00acac;">WEB DESIGNER</div>
+                            <p style="font-size: 12px;line-height: 20px;">Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. </p>
+                        </div>                     
+                     </div>
+                     <!-- end team -->
+                  </div>
+                   <!-- end col-4 -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- content Des -->
+        
+        
+        <!-- content Animotion -->
+        <div class="container" style=" margin-top:100px">
+        
+            
+            <div style="width: 100%;max-width: 900px;margin: 0 auto;border: 1px solid #e5e5e5;border-radius: 5px;position:relative">
+                <div style="width: 100%;height: 45px;padding: 16px 0 0 16px;background: #f2f2f2;border-bottom: 1px solid #e5e5e5;border-top-left-radius: 5px;border-top-right-radius: 5px;box-sizing: border-box;" class="clearfix">
+                    <div style="float: left;width: 14px;height: 14px;border-radius: 50%;margin-right: 8px;   background: #f95c58;"></div>
+                    <div style="float: left;width: 14px;height: 14px;border-radius: 50%;margin-right: 8px;   background: #f8b34e;"></div>
+                    <div style="float: left;width: 14px;height: 14px;border-radius: 50%;margin-right: 8px;   background: #85c258;"></div>
+                </div>
+                
+                <img id="mouse_img" class="mouse_img" src="../img/mouse.svg"/>
+                <img src="../img/sm_index_img.png" class="img-mobile"/>
+                
+                <!--animation-widget -->
+               <div style="height:625px; z-index:100" class="animation-widget">
+               	
+                	<div id="mouse_header">
+                    	<div class="demo_search" style="width:788px; margin:0 auto;position: relative;border-bottom: 1px solid #e6e6e6;background: #fff;
+border-top-left-radius: 5px;border-top-right-radius: 5px;height: 60px;">
+							<img src="../img/magnifier@2x.png" style="position:absolute; top:0;top: 15px;left: 20px;" />
+                        	<input id="mouse_input" type="text" placeholder="Search now" autocomplete="off" name="search" class="input-search">
+                        </div>
+                    </div>
+                    
+                    <img src="../img/step_1.jpg" style="width:100%; height:100%; display:none" id="demo_img_step"/>
+                    
+                    <!-- demo  content-->
+                    <div id="mouse_content" style=" opacity:0; width: 820px; margin:0 auto;max-height:550px; overflow:hidden;">
+                    	
+                        <ul class="demo_search_content_one video_ul" id="demo_mouse_ul">
+                        	<li class="video_ul_li clearfix">
+                            
+                                <div class="video_left">
+                                    <div class="video_top">
+                                        <div class="cover">
+                                            <img class="lazy" data-original="https://dn-hiho.qbox.me/videopic/201412/20Dec2014153139.jpg?imageView2/1/w/230/h/119/q/100" src="https://dn-hiho.qbox.me/videopic/201412/18Dec2014231202.jpg?imageView2/1/w/230/h/119/q/100" data-no-retina="" alt="Cover" title="ted staff: It's ted, the Musical" style="display: inline;">
+                                             <div class="     green_lin"></div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="title clearfix">
+                                            
+                                                <div class="score clearfix" title="5分">
+                                                    <img src="../img/gray@2x.png" src="../img/gray@2x.png" class="score_mark" alt="score">
+                                                    <img src="../img/yellow@2x.png" src="../img/gray@2x.png" class="score_mark" alt="score">
+                                                    <img src="../img/yellow@2x.png" src="../img/yellow@2x.png" class="score_mark" alt="score">
+                                                    <img src="../img/yellow@2x.png" src="../img/yellow@2x.png" class="score_mark" alt="score">
+                                                    <img src="../img/yellow@2x.png" src="../img/yellow@2x.png" class="score_mark" alt="score">
+                                                    <div style="clear:both"></div>
+                                                </div>
+                                            
+                                                <p class="title_p" title="ted staff: It's ted, the Musical"><em>ted</em> staff: It's <em>ted</em>, the Musical</p>
+            
+                                                <div style="clear:both"></div>
+                                            </div>
+                                            <div>
+                                                <p class="name" style="float:left; width:150px;margin-right: 0; margin-left:0">
+                                                 	<img src="../img/user_tag@2x.png" data-at2x="../img/user_tag@2x.png" alt="Speaker" title="Speaker" style="width:16px;margin-top: -3px;margin-right: 9px;">The <em>ted</em> Staff
+                                                 </p>
+                                            
+                                                <p class="tags">
+                                                 	<img src="../img/tags@2x.png" data-at2x="../img/tags@2x.png" alt="tags" title="tags">dance genetics music
+                                                     
+                                                </p>
+                                                <div style=" clear:both"></div>
+                                            </div>
+                                            
+                                            <p class="sub sub_js_set"  style="position: absolute; bottom:0">Do you have a <em>ted</em> Talk inside, just bursting to come out? Take this tongue-in-cheek musical journey to “Give Your Talk.” A musical love letter to our speakers -- written, directed and performed by the <em>ted</em> staff.</p>
+                                        </div>
+                                        <div style=" clear:both"></div>
+                                    </div>
+                                    
+                                    <ul class="video_bottom" id="HaCFnEQh_main_list">
+            							<li class="time_line" time="38.384" playid="HaCFnEQh" num="0" et="40.094" style="display:block">
+                                        	<p class="time" style="float:left">00:00:38</p>
+                                        	<p class="time_data" style="float:left">DH : It was <em>ted</em> .</p>
+                                        	<div style="clear:both"></div>
+                                    	</li>
+                                        <li class="time_line" time="55.854" playid="HaCFnEQh" num="1" et="56.524" style="display:block">
+                                        	<p class="time" style="float:left">00:00:55</p>
+                                        	<p class="time_data" style="float:left">LP : Who's <em>ted</em> ?</p>
+                                        	<div style="clear:both"></div>
+                                        </li>
+                                        <li class="time_line" time="109.495" playid="HaCFnEQh" num="2" et="112.204" style="display:block">
+                                        	<p class="time" style="float:left">00:01:49</p>
+                                        	<p class="time_data" style="float:left">? speaker , we'll make a <em>ted</em> Talk out of you .?</p>
+                                        	<div style="clear:both"></div>
+                                        </li>
+                                     </ul>
+                            	</div>
+        
+        
+                            </li>
+                            <li class="video_ul_li clearfix" >
+                            
+                                <div class="video_left" id="demo_li_two_div">
+                                    <div class="video_top">
+                                        <div class="cover">
+                                            <img class="lazy" data-original="https://dn-hiho.qbox.me/videopic/201412/20Dec2014153139.jpg?imageView2/1/w/230/h/119/q/100" src="https://dn-hiho.qbox.me/videopic/201412/20Dec2014153139.jpg?imageView2/1/w/230/h/119/q/100" data-no-retina="" alt="Cover" title="ted staff: It's ted, the Musical" style="display: inline;">
+                                             <div class="     green_lin"></div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="title clearfix">
+                                            
+                                                <div class="score clearfix" title="5分">
+                                                    <img src="../img/gray@2x.png" src="../img/gray@2x.png" class="score_mark" alt="score">
+                                                    <img src="../img/yellow@2x.png" src="../img/yellow@2x.png" class="score_mark" alt="score">
+                                                    <img src="../img/yellow@2x.png" src="../img/yellow@2x.png" class="score_mark" alt="score">
+                                                    <img src="../img/yellow@2x.png" src="../img/yellow@2x.png" class="score_mark" alt="score">
+                                                    <img src="../img/yellow@2x.png" src="../img/yellow@2x.png" class="score_mark" alt="score">
+                                                    <div style="clear:both"></div>
+                                                </div>
+                                            
+                                                <p class="title_p" title="ted staff: It's ted, the Musical"><em>ted</em> staff: It's <em>ted</em>, the Musical</p>
+            
+                                                <div style="clear:both"></div>
+                                            </div>
+                                            <div>
+                                                <p class="name" style="float:left; width:150px;margin-right: 0; margin-left:0">
+                                                 	<img src="../img/user_tag@2x.png" data-at2x="../img/user_tag@2x.png" alt="Speaker" title="Speaker" style="width:16px;margin-top: -3px;margin-right: 9px;">The <em>ted</em> Staff
+                                                 </p>
+                                            
+                                                <p class="tags">
+                                                 	<img src="../img/tags@2x.png" data-at2x="../img/tags@2x.png" alt="tags" title="tags">dance genetics music
+                                                     
+                                                </p>
+                                                <div style=" clear:both"></div>
+                                            </div>
+                                            
+                                            <p class="sub sub_js_set"  style="position: absolute; bottom:0">Do you have a <em>ted</em> Talk inside, just bursting to come out? Take this tongue-in-cheek musical journey to “Give Your Talk.” A musical love letter to our speakers -- written, directed and performed by the <em>ted</em> staff.</p>
+                                        </div>
+                                        <div style=" clear:both"></div>
+                                    </div>
+                                    
+                                    <ul class="video_bottom" id="HaCFnEQh_main_list">
+            							<li class="time_line" time="38.384" playid="HaCFnEQh" num="0" et="40.094" style="display:block">
+                                        	<p class="time" style="float:left">00:00:38</p>
+                                        	<p class="time_data" style="float:left">DH : It was <em>ted</em> .</p>
+                                        	<div style="clear:both"></div>
+                                    	</li>
+                                        <li class="time_line" time="55.854" playid="HaCFnEQh" num="1" et="56.524" style="display:block">
+                                        	<p class="time" style="float:left">00:00:55</p>
+                                        	<p class="time_data" style="float:left">LP : Who's <em>ted</em> ?</p>
+                                        	<div style="clear:both"></div>
+                                        </li>
+                                        <li class="time_line" time="109.495" playid="HaCFnEQh" num="2" et="112.204" style="display:block">
+                                        	<p class="time" style="float:left">00:01:49</p>
+                                        	<p class="time_data" style="float:left">? speaker , we'll make a <em>ted</em> Talk out of you .?</p>
+                                        	<div style="clear:both"></div>
+                                        </li>
+                                     </ul>
+                            	</div>
+        
+        
+                            </li>
+                            <li class="video_ul_li clearfix">
+                            
+                                <div class="video_left">
+                                    <div class="video_top">
+                                        <div class="cover">
+                                            <img class="lazy" data-original="https://dn-hiho.qbox.me/videopic/201412/20Dec2014153139.jpg?imageView2/1/w/230/h/119/q/100" src="https://dn-hiho.qbox.me/videopic/201412/15Dec2014133636.jpg?imageView2/1/w/230/h/119/q/100" data-no-retina="" alt="Cover" title="ted staff: It's ted, the Musical" style="display: inline;">
+                                             <div class="     green_lin"></div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="title clearfix">
+                                            
+                                                <div class="score clearfix" title="5分">
+                                                    <img src="../img/gray@2x.png" src="../img/gray@2x.png" class="score_mark" alt="score">
+                                                    <img src="../img/yellow@2x.png" src="../img/gray@2x.png" class="score_mark" alt="score">
+                                                    <img src="../img/yellow@2x.png" src="../img/gray@2x.png" class="score_mark" alt="score">
+                                                    <img src="../img/yellow@2x.png" src="../img/gray@2x.png" class="score_mark" alt="score">
+                                                    <img src="../img/yellow@2x.png" src="../img/yellow@2x.png" class="score_mark" alt="score">
+                                                    <div style="clear:both"></div>
+                                                </div>
+                                            
+                                                <p class="title_p" title="ted staff: It's ted, the Musical"><em>ted</em> staff: It's <em>ted</em>, the Musical</p>
+            
+                                                <div style="clear:both"></div>
+                                            </div>
+                                            <div>
+                                                <p class="name" style="float:left; width:150px;margin-right: 0; margin-left:0">
+                                                 	<img src="../img/user_tag@2x.png" data-at2x="../img/user_tag@2x.png" alt="Speaker" title="Speaker" style="width:16px;margin-top: -3px;margin-right: 9px;">The <em>ted</em> Staff
+                                                 </p>
+                                            
+                                                <p class="tags">
+                                                 	<img src="../img/tags@2x.png" data-at2x="../img/tags@2x.png" alt="tags" title="tags">dance genetics music
+                                                     
+                                                </p>
+                                                <div style=" clear:both"></div>
+                                            </div>
+                                            
+                                            <p class="sub sub_js_set"  style="position: absolute; bottom:0">Do you have a <em>ted</em> Talk inside, just bursting to come out? Take this tongue-in-cheek musical journey to “Give Your Talk.” A musical love letter to our speakers -- written, directed and performed by the <em>ted</em> staff.</p>
+                                        </div>
+                                        <div style=" clear:both"></div>
+                                    </div>
+                                    
+                                    <ul class="video_bottom" id="HaCFnEQh_main_list">
+            							<li class="time_line" time="38.384" playid="HaCFnEQh" num="0" et="40.094" style="display:block">
+                                        	<p class="time" style="float:left">00:00:38</p>
+                                        	<p class="time_data" style="float:left">DH : It was <em>ted</em> .</p>
+                                        	<div style="clear:both"></div>
+                                    	</li>
+                                        <li class="time_line" time="55.854" playid="HaCFnEQh" num="1" et="56.524" style="display:block">
+                                        	<p class="time" style="float:left">00:00:55</p>
+                                        	<p class="time_data" style="float:left">LP : Who's <em>ted</em> ?</p>
+                                        	<div style="clear:both"></div>
+                                        </li>
+                                     </ul>
+                            	</div>
+        
+        
+                            </li>
+                            <li class="video_ul_li clearfix">
+                            
+                                <div class="video_left">
+                                    <div class="video_top">
+                                        <div class="cover">
+                                            <img class="lazy" data-original="https://dn-hiho.qbox.me/videopic/201412/20Dec2014153139.jpg?imageView2/1/w/230/h/119/q/100" src="https://dn-hiho.qbox.me/videopic/201412/18Dec2014231202.jpg?imageView2/1/w/230/h/119/q/100" data-no-retina="" alt="Cover" title="ted staff: It's ted, the Musical" style="display: inline;">
+                                             <div class="     green_lin"></div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="title clearfix">
+                                            
+                                                <div class="score clearfix" title="5分">
+                                                    <img src="../img/gray@2x.png" src="../img/gray@2x.png" class="score_mark" alt="score">
+                                                    <img src="../img/yellow@2x.png" src="../img/yellow@2x.png" class="score_mark" alt="score">
+                                                    <img src="../img/yellow@2x.png" src="../img/yellow@2x.png" class="score_mark" alt="score">
+                                                    <img src="../img/yellow@2x.png" src="../img/yellow@2x.png" class="score_mark" alt="score">
+                                                    <img src="../img/yellow@2x.png" src="../img/yellow@2x.png" class="score_mark" alt="score">
+                                                    <div style="clear:both"></div>
+                                                </div>
+                                            
+                                                <p class="title_p" title="ted staff: It's ted, the Musical"><em>ted</em> staff: It's <em>ted</em>, the Musical</p>
+            
+                                                <div style="clear:both"></div>
+                                            </div>
+                                            <div>
+                                                <p class="name" style="float:left; width:150px;margin-right: 0; margin-left:0">
+                                                 	<img src="../img/user_tag@2x.png" data-at2x="../img/user_tag@2x.png" alt="Speaker" title="Speaker" style="width:16px;margin-top: -3px;margin-right: 9px;">The <em>ted</em> Staff
+                                                 </p>
+                                            
+                                                <p class="tags">
+                                                 	<img src="../img/tags@2x.png" data-at2x="../img/tags@2x.png" alt="tags" title="tags">dance genetics music
+                                                     
+                                                </p>
+                                                <div style=" clear:both"></div>
+                                            </div>
+                                            
+                                            <p class="sub sub_js_set"  style="position: absolute; bottom:0">Do you have a <em>ted</em> Talk inside, just bursting to come out? Take this tongue-in-cheek musical journey to “Give Your Talk.” A musical love letter to our speakers -- written, directed and performed by the <em>ted</em> staff.</p>
+                                        </div>
+                                        <div style=" clear:both"></div>
+                                    </div>
+                                    
+                                    <ul class="video_bottom" id="HaCFnEQh_main_list">
+            							<li class="time_line" time="38.384" playid="HaCFnEQh" num="0" et="40.094" style="display:block">
+                                        	<p class="time" style="float:left">00:00:38</p>
+                                        	<p class="time_data" style="float:left">DH : It was <em>ted</em> .</p>
+                                        	<div style="clear:both"></div>
+                                    	</li>
+                                        <li class="time_line" time="55.854" playid="HaCFnEQh" num="1" et="56.524" style="display:block">
+                                        	<p class="time" style="float:left">00:00:55</p>
+                                        	<p class="time_data" style="float:left">LP : Who's <em>ted</em> ?</p>
+                                        	<div style="clear:both"></div>
+                                        </li>
+                                        <li class="time_line" time="109.495" playid="HaCFnEQh" num="2" et="112.204" style="display:block">
+                                        	<p class="time" style="float:left">00:01:49</p>
+                                        	<p class="time_data" style="float:left">? speaker , we'll make a <em>ted</em> Talk out of you .?</p>
+                                        	<div style="clear:both"></div>
+                                        </li>
+                                     </ul>
+                            	</div>
+        
+        
+                            </li>
+                        </ul>
+                    </div>
+               		<!-- demo  content-->
+                    
+               </div>
+               <!--animation-widget -->
+               
+               <!--阻止animation-widget聚焦 -->
+               <div style="height:625px; position:absolute; top:0; width:100% "></div>
+               <!--阻止animation-widget聚焦 -->
+                
+            </div>
+            
+            <div style=" width:350px; margin:0 auto; margin-top:30px;">
+            	<a href="sign_up.html"><button class="Btn Btn--expanded">Start your free trial</button></a>
+        	</div>
+            
+        </div>
+    	<!-- content Animotion -->
+        
+        
+    </div>
+    
+ 
+ 
+	<footer style="width:100%; background-color:#fff;">
+    	<div style="border-top: 1px solid #d9d9d9;padding: 40px 15px 30px;" class="container">
+			<p style="color:#92969e;text-align:center">隐私政-版权声明-服务条款-关于我们-英语读吧-hiho客户端-教育导航</p>
+			<p style="color:#92969e; text-align:center; margin-top:7px">Copyright © hiho, Powered by 东方泰明 粤ICP备14069699号-3</p>
+        </div>
+	</footer>
+    
+
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script>
+	
+	//Code Animotion
+	var positionCode = 0;
+	var intervalCode = null;	
+	var oneCode = new Array('G','E','T', ' ', '/','t','r','a','n','s','c','r','i','p','t','s','/','v','i','d','e','o','1');
+	var oneLength = 0;
+	var twoCode = new Array('G','E','T',' ', 'a','r','c','h','?','q','u','e','r','y','=','"','y','a','h','o','o',' ','p','r','i','c','i','n','g','"');
+	var twoLength = 0;
+	
+	
+	//Mouse Animotion
+	var mousrCode = new Array('T','e','d');
+	var mouseLength = 0;
+	var intervalMouse = null;
+	
+
+	$(document).ready(function() {
+		setTimeout('showCodeAnimotion()',1000);
+		
+		intervalMouse = window.setInterval("actionShowMouseAinmotion()",200);
+	})
+
+	function showCodeAnimotion(){
+		$("#api-text").text('');
+		intervalCode = window.setInterval("actionShowCodeAnimotion()",120);
+	}
+
+	function actionShowCodeAnimotion(){
+		if(positionCode == 0){
+			if(oneLength < 24){
+				$("#api-text").append(oneCode[oneLength]);
+				oneLength++;
+			}else{
+				oneLength = 0;
+				positionCode = 1;
+				$("#code_ul_one").show();
+				$("#code_ul_two").hide();
+				window.clearInterval(intervalCode);
+				
+				setTimeout('showCodeAnimotion()',2000);
+			}
+		}else if(positionCode == 1){
+			if(twoLength < 30){
+				$("#api-text").append(twoCode[twoLength]);
+				twoLength++;
+			}else{
+				twoLength = 0;
+				positionCode = 0;
+				$("#code_ul_one").hide();
+				$("#code_ul_two").show();
+				window.clearInterval(intervalCode);
+				
+				setTimeout('showCodeAnimotion()',2000);
+			}
+		}
+		
+	}
+	
+	
+	
+	//Mousr Animotion    mouse_img 默认top45
+	function actionShowMouseAinmotion(){
+		if(mouseLength < 3){
+				var text = '';
+				for(var i = 0; i < (mouseLength+1); i++){
+					text += mousrCode[i];
+				}
+				$("#mouse_input").val(text);
+				mouseLength++;
+			}else{
+				mouseLength = 0;
+				window.clearInterval(intervalMouse);
+				
+				mouseAnimotionOneStep();
+		}
+	}
+	
+	//第1步   鼠标移动到搜索按钮
+	function mouseAnimotionOneStep(){
+		$("#mouse_img").stop().animate({ top:"80", left:"80"},500,function(){
+   			setTimeout('mouseAnimotionTwoStep()',1000);
+        });
+	}
+	
+	//第2步    list显示  鼠标移动到list
+	function mouseAnimotionTwoStep(){
+		$("#mouse_content").stop().animate({ opacity:"1",},1000,function(){
+			$("#mouse_img").stop().animate({ top:"180", left:"400"},1000,function(){
+   				mouseAnimotionThreeStep();
+        	});
+        });
+	}
+	
+	//第3步   list滚动到第二条   第二条修改背景色
+	function mouseAnimotionThreeStep(){
+		$("#mouse_content").animate({scrollTop: 250}, 1000,function(){
+			$("#demo_li_two_div").css('background-color', '#e3e3e3');
+			setTimeout('mouseAnomotionFourStep()',1000);
+		});
+	}
+	
+	//第4步  list和顶部搜索消失  播放显示 鼠标移动
+	function mouseAnomotionFourStep(){
+		$("#demo_mouse_ul").hide();
+		$("#mouse_header").hide();
+		
+		$("#demo_img_step").show();
+		$("#mouse_content").css('width','100%');
+		
+		$("#mouse_img").stop().animate({ top:"85px", left:"660px"},1000,function(){
+   			$("#demo_img_step").attr('src','../img/step_2.jpg'); 
+			setTimeout('mouseAnomotionStep_ImgTwo()',1000);
+        });
+	}
+	
+	//第5步 
+	function mouseAnomotionStep_ImgTwo(){
+		$("#demo_img_step").attr('src','../img/step_3.jpg');
+		$("#mouse_img").stop().animate({ top:"85px", left:"760px"},1000,function(){
+   			 $("#demo_img_step").attr('src','../img/step_4.jpg');
+			 setTimeout('mouseAnomotionStep_ImgThree()',1000);
+        });
+	}
+	
+	//第6步 
+	function mouseAnomotionStep_ImgThree(){
+		$("#demo_img_step").attr('src','../img/step_5.jpg');
+		$("#mouse_img").stop().animate({ top:"295px", left:"310px"},1000,function(){
+   			setTimeout('mouseAnomotionStep_ImgFour()',1000);
+        });
+	}
+	
+	//第7步 
+	function mouseAnomotionStep_ImgFour(){
+		$("#demo_img_step").attr('src','../img/step_1.jpg');
+		$("#mouse_img").stop().animate({ top:"85px", left:"740px"},1000,function(){
+   			$("#demo_img_step").attr('src','../img/step_6.jpg');
+			setTimeout('mouseAnomotionStep_ImgFive()',1000);
+        });
+	}
+	
+	function mouseAnomotionStep_ImgFive(){
+		$("#demo_img_step").attr('src','../img/step_7.jpg');
+		$("#mouse_img").stop().animate({ top:"115px", left:"815px"},500,function(){
+			 setTimeout('clearMouseAnomotion()',3000);
+        });
+	}
+	
+	
+	function clearMouseAnomotion(){
+		$("#mouse_content").css('opacity','0');
+		
+		$("#demo_li_two_div").css('background-color', '#fff');
+		
+		$("#demo_mouse_ul").show();
+		$("#mouse_header").show();
+		
+		$("#demo_img_step").hide();
+		$("#mouse_content").css('width','820px');
+		
+		$("#mouse_img").stop().animate({ top:"45px", left:"0"},500,function(){
+			 intervalMouse = window.setInterval("actionShowMouseAinmotion()",200);
+        });
+	}
+	
+	
+</script>
+</body>
+</html>
