@@ -44,24 +44,30 @@ outline: none;
 
 
         <!-- content Animotion -->   
-            <div style="width: 100%;max-width: 800px;position:relative">
+            <div style="width: 100%;height:100%">
                 
-                <!--animation-widget -->
-               <div style="height:625px; z-index:100; margin:0; padding:0">
-               	
-                	<div id="frame_list_header">
+                <div id="frame_list_header">
+                        
                     	<div class="demo_search" style="width:788px; margin:0 auto;position: relative;border-bottom: 1px solid #e6e6e6;background: #fff;
 border-top-left-radius: 5px;border-top-right-radius: 5px;height: 60px;">
-							<img src="../img/magnifier@2x.png" style="position:absolute; top:0;top: 15px;left: 20px;" />
+							<img id="frame_video_back_img" src="https://www.hiho.com/img/play_single/clip_share0@2x.png" style="position:absolute; top:0;top: 15px;left: 20px; display:none;border-right: 1px solid #e5e5e5;padding-right: 15px; cursor:pointer" />
+							<img id="frame_video_search_img" src="../img/magnifier@2x.png" style="position:absolute; top:0;top: 15px;left: 20px;" />
                         	<input type="text" placeholder="Search now" autocomplete="off" name="search" class="input-search" id="frame_input_search">
                         </div>
-                    </div>
+                        
+                        <div style="clear:both"></div>
+				</div>
+                
+                <iframe id="frame_web_video" class="embed-responsive-item" src="http://192.168.199.163/paly_adaptive" style="width:100%;border: 0px; height:500px; display:none"></iframe>
+                
+               <!--animation-widget -->
+               <div id="frame_content" style="height:625px; z-index:100; margin:0; padding:0">
                     
                     <!-- demo  content-->
                     <div id="frame_list_content" style=" width: 820px; margin:0 auto;max-height:550px; display:none; z-index:99;">
                     	
                         <ul class="demo_search_content_one video_ul" id="frame_list_ul">
-                        	<li class="video_ul_li clearfix">
+                        	<li class="video_ul_li clearfix" playid="VIIQo5SG">
                             
                                 <div class="video_left">
                                     <div class="video_top">
@@ -81,7 +87,7 @@ border-top-left-radius: 5px;border-top-right-radius: 5px;height: 60px;">
                                                     <div style="clear:both"></div>
                                                 </div>
                                             
-                                                <p class="title_p" title="ted staff: It's ted, the Musical"><em>ted</em> staff: It's <em>ted</em>, the Musical</p>
+                                                <p class="title_p" title="ted staff: It's ted, the Musical">Improv Everywhere: A <em>ted</em> speaker's worst nightmare</p>
             
                                                 <div style="clear:both"></div>
                                             </div>
@@ -123,7 +129,7 @@ border-top-left-radius: 5px;border-top-right-radius: 5px;height: 60px;">
         
         
                             </li>
-                            <li class="video_ul_li clearfix" >
+                            <li class="video_ul_li clearfix" playid="HaCFnEQh">
                             
                                 <div class="video_left" id="demo_li_two_div">
                                     <div class="video_top">
@@ -185,7 +191,7 @@ border-top-left-radius: 5px;border-top-right-radius: 5px;height: 60px;">
         
         
                             </li>
-                            <li class="video_ul_li clearfix">
+                            <li class="video_ul_li clearfix" playid="khPTsxgy">
                             
                                 <div class="video_left">
                                     <div class="video_top">
@@ -205,7 +211,7 @@ border-top-left-radius: 5px;border-top-right-radius: 5px;height: 60px;">
                                                     <div style="clear:both"></div>
                                                 </div>
                                             
-                                                <p class="title_p" title="ted staff: It's ted, the Musical"><em>ted</em> staff: It's <em>ted</em>, the Musical</p>
+                                                <p class="title_p" title="ted staff: It's ted, the Musical">Chris Anderson: <em>ted</em>'s nonprofit transition</p>
             
                                                 <div style="clear:both"></div>
                                             </div>
@@ -221,7 +227,7 @@ border-top-left-radius: 5px;border-top-right-radius: 5px;height: 60px;">
                                                 <div style=" clear:both"></div>
                                             </div>
                                             
-                                            <p class="sub sub_js_set"  style="position: absolute; bottom:0">Do you have a <em>ted</em> Talk inside, just bursting to come out? Take this tongue-in-cheek musical journey to “Give Your Talk.” A musical love letter to our speakers -- written, directed and performed by the <em>ted</em> staff.</p>
+                                            <p class="sub sub_js_set" style="position: absolute; bottom:0">Do you have a <em>ted</em> Talk inside, just bursting to come out? Take this tongue-in-cheek musical journey to “Give Your Talk.” A musical love letter to our speakers -- written, directed and performed by the <em>ted</em> staff.</p>
                                         </div>
                                         <div style=" clear:both"></div>
                                     </div>
@@ -242,7 +248,7 @@ border-top-left-radius: 5px;border-top-right-radius: 5px;height: 60px;">
         
         
                             </li>
-                            <li class="video_ul_li clearfix">
+                            <li class="video_ul_li clearfix" playid="HaCFnEQh">
                             
                                 <div class="video_left">
                                     <div class="video_top">
@@ -329,11 +335,40 @@ border-top-left-radius: 5px;border-top-right-radius: 5px;height: 60px;">
 	
 		$("#frame_input_search").keydown(function (e) {
                 if (e.keyCode == 13) {
+					hideVideo();
                     $("#frame_list_content").show();
                 }
          }); 
 		 
-	})	
+		 $("#frame_list_ul").delegate("li","click",function(){
+			 $("#frame_web_video").show();
+			 $("#frame_content").hide();
+			 
+			 $("#frame_video_back_img").show();
+			 $("#frame_video_search_img").css("left","80px");
+			 $("#frame_input_search").css({'padding-left':120});
+			 
+			 var playId = $(this).attr('playid');
+			 document.getElementById("frame_web_video").src = 'http://192.168.199.163/paly_adaptive/'+playId;
+		 });
+		 
+		 
+		 $("#frame_video_back_img").click(function(){
+			 hideVideo();
+		 });
+		 
+	});
+	
+	function hideVideo(){
+		$("#frame_web_video").hide();
+		$("#frame_content").show();
+			 
+		$("#frame_video_back_img").hide();
+		$("#frame_video_search_img").css("left","20px");
+		$("#frame_input_search").css({'padding-left':82}); 
+			 
+		document.getElementById("frame_web_video").src = '';
+	}
 	
 </script>
 </body>
